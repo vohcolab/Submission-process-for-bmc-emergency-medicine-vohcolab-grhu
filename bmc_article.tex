@@ -56,6 +56,7 @@
 \usepackage[acronym,smallcaps]{glossaries} % added by authors
 \usepackage{multirow} % added by authors
 \usepackage{tabu, tabularx, booktabs} % added by authors
+\usepackage{float} % added by authors
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                             %%
@@ -251,21 +252,21 @@
 
 \begin{abstract} % abstract
 \parttitle{Background} %if any
-\gls{ed} \gls{hu}, defined as having more than ten visits to the \gls{ed} per year, are a small group of patients that use a significant proportion of ED resources. The High Users Resolution Group (GRHU) identifies and provides care to \gls{hu} to improve their health situation and reduce their visit frequency to the ED by delivering patient-centered, case management integrated care.
+\gls{ed} \gls{hu}, defined as having more than ten visits to the \gls{ed} per year, are a small group of patients that use a significant proportion of ED resources. The High Users Resolution Group (GRHU) identifies and provides care to \gls{hu} to improve their health conditions and reduce the frequency of ED visits by delivering patient-centered case management integrated care.
 
 \parttitle{Objectives} %if any
-The main objective of this study was to measure the impact in terms of hospital visits of the GRHU intervention. Additionally, we aim to compare the program costs against its potential savings or additional costs. Finally, we intend to study the impact of the intervention across different groups of patients. 
+The main objective of this study was to measure the impact of the GRHU intervention in terms of reduction of ED visits, outpatient appointments, and hospitalizations. As secondary objectives, we aimed to compare the GRHU intervention costs against its potential savings or additional costs. Finally, we intend to study the impact of this intervention across different groups of patients.
 
 \parttitle{Methods}
-We studied The changes triggered by the GRHU program in a retrospective non-controlled before-after analysis of patients' hospital utilization data on six and 12-month windows from the first appointment. The GRHU team provided the patients' and cost data.
+We studied the changes triggered by the GRHU program in a retrospective non-controlled before-after analysis of patients' hospital utilization data on 6 and 12-month windows from the first appointment. 
 
 \parttitle{Results}
-A total of 238 ED \gls{hu} were intervened. A sample of 88 patients was analyzed on the 12-month window as they fulfilled all inclusion criteria. 
-This intervention was associated with a statistically significant reduction of 51\% in ED use and hospitalizations, and a non-statistically significant increase in the total number of outpatient appointments.
-Overall costs reduced 43.56\%. We estimated the intervention costs to be €162,847.82. The net cost saving was €104,305.25. The program's \gls{roi} was estimated to be €2.3.
+A total of 238 ED \gls{hu} were intervened. A sample of 152 and 88 patients was analyzed on the 6 and 12-month window, respectively. 
+GRHU intervention was associated with a statistically significant reduction of 51\% in ED visits and hospitalizations and a non-statistically significant increase in the total number of outpatient appointments.
+Overall costs reduced 43.56\%. We estimated the intervention costs to be €79,935.34. The net cost saving was €104,305.25. The program's \gls{roi} was estimated to be €2.3.
 
 \parttitle{Conclusions}
-Patient-centered case management for ED \gls{hu} seems to effectively reduce ED visits and hospitalizations, leading to the more appropriate use of resources. 
+Patient-centered case management for ED \gls{hu} seems to effectively reduce ED visits and hospitalizations, leading to a better use of resources. 
 
 
 \end{abstract}
@@ -329,141 +330,135 @@ Patient-centered case management for ED \gls{hu} seems to effectively reduce ED 
 \section*{Background}
 Emergency Department (ED) High Users (HU) are a small group of patients that use a significant proportion of ED resources through multiple recurrent admissions.  \cite{abello_care_2012, chiu_statistical_2019, blank_descriptive_2005}. 
 
-It is estimated that \gls{hu} ``comprise $4.5\%$ to $8\%$ of all ED patients while accounting for 21\% to 28\% of all visits'' \cite{lacalle_frequent_2010}.
+Studies estimate that \gls{hu} ``comprise $4.5\%$ to $8\%$ of all ED patients while accounting for 21\% to 28\% of all visits'' \cite{lacalle_frequent_2010}.
 In Portugal, patients that visited at least four times a year the \gls{ed} represented, in 2015, 12\% of the number of ED users, but 35.9\% of the total ED episodes \cite{catarino_utilizadores_2017}.
-\gls{hu} contributes to \gls{ed} crowding \cite{moe_effectiveness_2017, lee_characteristics_2020,seguin_frequent_2018, hunt_characteristics_2006}, resulting in a reduction in quality of care, increased waiting times, and increased healthcare professionals’ stress \cite{chiu_statistical_2019, van_den_heede_interventions_2016}. 
-Regular admissions to the \gls{ed} suggest that the \gls{ed} is not an excellent place to treat these patients (for their clinical and social needs) \cite{hudon_effectiveness_2016, van_den_heede_interventions_2016, ruger_analysis_2004, mandelberg_epidemiologic_2000}. 
-The rise of \gls{ed} crowding problems generated by this behaviour may compromise the access to the ED for patients with life-threatening situations whose condition will deteriorate if not treated on time and whose care can be detracted due to ED \gls{hu} \cite{grimmer-somers_holistic_2010, navratil-strawn_emergency_2014, soril_reducing_2015, van_den_heede_interventions_2016, mandelberg_epidemiologic_2000, lee_utilization_2007}.
-Additionally, HU places a disproportionately high burden on the healthcare system due to its elevated resource use, which leads to excessive hospital costs \cite{ruger_analysis_2004, frost_using_2017, okin_effects_2000}.
+\gls{hu} contribute to \gls{ed} over-crowding \cite{moe_effectiveness_2017, lee_characteristics_2020,seguin_frequent_2018, hunt_characteristics_2006}, resulting in reduced quality of care, increased waiting times, and healthcare professionals’ stress \cite{chiu_statistical_2019, van_den_heede_interventions_2016}. 
+Regular admissions to the \gls{ed} suggest that the \gls{ed} is not the proper place to treat these patients (for their clinical and social needs) \cite{hudon_effectiveness_2016, van_den_heede_interventions_2016, ruger_analysis_2004, mandelberg_epidemiologic_2000}. 
+Furthermore, the rise of \gls{ed} crowding problems generated by these patients may compromise the access to the \gls{ed} for patients with life-threatening situations whose condition will deteriorate if not treated on time  \cite{grimmer-somers_holistic_2010, navratil-strawn_emergency_2014, soril_reducing_2015, van_den_heede_interventions_2016, mandelberg_epidemiologic_2000, lee_utilization_2007}.
+The high burden the \gls{hu} place on the healthcare system also leads to excessive hospital costs \cite{ruger_analysis_2004, frost_using_2017, okin_effects_2000}.
+%HU place a disproportionately high burden on the healthcare system due to the elevated resource use, which leads to high hospital costs \cite{ruger_analysis_2004, frost_using_2017, okin_effects_2000}.
 Hence, maintaining the dimension of the ED to treat \gls{hu} can be a waste of resources \cite{mandelberg_epidemiologic_2000}.  
-\gls{ed} \gls{hu} also recur more to other non-emergency care services than non-high users \cite{ruger_analysis_2004, sun_predictors_2003}. 
+Finally, \gls{ed} \gls{hu} recur more to other non-emergency care services compared to non-ED \gls{hu} \cite{hansagi_2001, sun_predictors_2003}. 
 
-\par To improve the quality of care (in \gls{ed} or primary care), the health status of \gls{ed} \gls{hu}, and their high number of \gls{ed} visits, it is necessary to understand the characteristics of these patients. 
-They often have complex healthcare needs that are not optimally managed in an ED setting that provides episodic and discontinuous care \cite{abello_care_2012, soril_reducing_2015, mandelberg_epidemiologic_2000, sun_predictors_2003, okin_effects_2000}. 
-Literature reports that psychiatric and physical conditions, chronic diseases, advanced age, lack of family support, substance abuse, socioeconomic difficulties, and demographic and socio-cultural characteristics impact ED use \cite{abello_care_2012, bodenmann_case_2017, chiu_statistical_2019, hudon_effectiveness_2016, moe_effectiveness_2017, navratil-strawn_emergency_2014, van_den_heede_interventions_2016, shumway_cost-effectiveness_2008, ruger_analysis_2004, frost_using_2017, sun_predictors_2003, lee_utilization_2007, doupe_frequent_2012}.
-Furthermore, high \gls{ed} users report higher mortality, worse health outcomes, and status \cite{moe_effectiveness_2017, ruger_analysis_2004, sun_predictors_2003, chan_frequent_2002, blank_descriptive_2005}.
-\par Hence, interventions are necessary to reduce the number of avoidable \gls{ed} visits, reducing the total cost associated with these patients \cite{frost_using_2017, kumar_effectiveness_2013}.
-To be successful, interventions should focus on a clinical perspective and social, emotional, economic, and environmental aspects \cite{grimmer-somers_holistic_2010}.
-Hence, studies suggest interventions should be specifically targeted to each patient (\textbf{e.g.}, \gls{cm}).
-One possible strategy is care integration implemented by a multidisciplinary team. 
-This intervention may reduce the number of \gls{ed} visits by preventing situations that require emergent care \cite{hudon_effectiveness_2016, moe_effectiveness_2017, navratil-strawn_emergency_2014, soril_reducing_2015}.
-Case management promotes continuous, not episodic care \cite{kumar_effectiveness_2013}. 
-This strategy has proven a variety of promising results, such as increased satisfaction, quality of life, and reduced costs \cite{hudon_effectiveness_2016, shumway_cost-effectiveness_2008}, positively impacting the healthcare systems \cite{kumar_effectiveness_2013}. 
-Other types of interventions have also presented promising preliminary results \cite{shumway_cost-effectiveness_2008}.
+\par Understanding the health characteristics of these patients is necessary to improve the quality of care (in \gls{ed} or in primary care).
+HU often have complex healthcare needs that cannot be optimally managed in an ED setting that provides episodic and discontinuous care \cite{abello_care_2012, soril_reducing_2015, mandelberg_epidemiologic_2000, sun_predictors_2003, okin_effects_2000}. 
+Literature reports several characteristics that correlate with high usage of the \gls{ed}, namely:  psychiatric and physical conditions, chronic diseases, advanced age, lack of family support, substance abuse, socioeconomic status, and demographic and socio-cultural characteristics \cite{abello_care_2012, bodenmann_case_2017, chiu_statistical_2019, hudon_effectiveness_2016, moe_effectiveness_2017, navratil-strawn_emergency_2014, van_den_heede_interventions_2016, shumway_cost-effectiveness_2008, ruger_analysis_2004, frost_using_2017, sun_predictors_2003, lee_utilization_2007, doupe_frequent_2012}.   
+Furthermore, \gls{ed} \gls{hu} report higher mortality, and worse health status and outcomes \cite{moe_effectiveness_2017, ruger_analysis_2004, sun_predictors_2003, chan_frequent_2002, blank_descriptive_2005}.
+\par Interventions to reduce the number of \gls{ed} usage by \gls{hu} have shown to work in practice, particularly through Case Manager \cite{kumar_effectiveness_2013,moe_effectiveness_2017}.
+%\par Interventions to decrease \gls{ed} visits by \gls{hu} avoidable \gls{ed} visits, reducing the total cost associated with these patients \cite{frost_using_2017, kumar_effectiveness_2013}.
+These interventions should focus not only on a clinical perspective but also on socioeconomic, emotional, and environmental aspects \cite{grimmer-somers_holistic_2010}.
+%Hence, studies suggest interventions should be specifically targeted to each patient (\textbf{e.g.}, \gls{cm}).
+%One possible strategy is care integration implemented by a multidisciplinary team. 
+%\gls{CM} interventions may reduce the number of \gls{ed} visits by preventing situations that require emergent care \cite{hudon_effectiveness_2016, moe_effectiveness_2017, navratil-strawn_emergency_2014, soril_reducing_2015}.
+Case management promotes continuous care in contrast to episodic care \cite{kumar_effectiveness_2013}. 
+This care strategy has proven promising results, such as reduced hospital use, increased patient satisfaction, quality of life, and reduced costs \cite{hudon_effectiveness_2016, shumway_cost-effectiveness_2008}, positively impacting the healthcare systems \cite{kumar_effectiveness_2013}. 
 
 \subsection*{Intervention}
 
-In 2016, a joint-venture between \gls{hgo} and the Agrupamento de Centros de Saúde Almada-Seixal (ACES - Almada-Seixal) created a program to provide case management interventions to \gls{hu} of \gls{hgo}.
-\gls{grhu} is a multidisciplinary team that identifies and provides care to \gls{hu} to improve their health status and reduce their visit frequency to the \gls{ed}.
-\gls{grhu} addresses the healthcare and social needs of \gls{hu} by delivering patient-centered, case management interventions \cite{kanter_clinical_1989}.
+In 2016, \gls{hgo} and the Agrupamento de Centros de Saúde Almada-Seixal (ACES - Almada-Seixal) created a program to provide case management interventions to \gls{hu} of \gls{hgo}.
+The \gls{grhu} is a multidisciplinary team that identifies and provides care to \gls{hu} to improve their health status and, consequently, reduce their visits to the \gls{ed}.
+\gls{grhu} addresses the healthcare and social needs of \gls{hu} by delivering patient-centered case management interventions \cite{kanter_clinical_1989}.
 The program's team is composed of four social workers, six doctors, and four nurses.
-Their workflow includes the following responsibilities: i) to discuss potential patients to include in the program; ii) to discuss and plan personalized steps to tackle the situation of each \gls{hu} included in the program (\gls{pii}); iii) to assign a \gls{cm} to each \gls{hu} to implement the \gls{pii} through outpatient consultations (named \gls{huconsult}).
-Throughout June 2016 and June 2020, the \gls{grhu} team performed, on average, five \gls{huconsult} consultations per month. 
+Their workflow includes: i) to discuss potential patients to include in the program; ii) to discuss and plan personalized steps to tackle the situation of each \gls{hu} included in the program (\gls{pii}); iii) to assign a \gls{cm} to each \gls{hu} to implement the \gls{pii} through outpatient consultations.
+Between June 2016 and June 2020, the \gls{grhu} team performed, on average, five appointments per month.
 
-\subsection*{Goals of this study}
-The main goal of this study is to measure the impact of the \gls{grhu} intervention on \gls{ed} admissions. 
-More specifically, to assess whether a \gls{hu} has fewer visits to the \gls{ed} after being included in the program. Additionally, we intend to provide an overall analysis of the impact of the intervention on different hospital services: outpatient visits and inpatient stays. 
-Complementary to this analysis, we intend to study the impact of this intervention regarding the program costs against the potential savings or additional costs. Finally, we intend to study the impact of the intervention across patient groups to help the \gls{grhu} team better understand which patients may have better or worse outcomes from the intervention.
+\subsection*{Objectives}
+The main objective of the study is to measure the impact of the \gls{grhu} intervention on \gls{ed} admissions. Additionally, we intend to provide an overall analysis of the impact of the GRHU intervention on different hospital services: outpatient appointments and hospitalizations. 
+\par As a secondary objective, we aim to study the impact of this intervention regarding the program costs against the potential savings or additional costs. Finally, we intend to study the impact of the intervention across patient groups to better understand which patients may have better or worse outcomes from the intervention.
+
 
 \section*{Methodology}
 
 \subsection*{Study design}
-To study the impact of the \gls{grhu} intervention, we performed a retrospective non-controlled before-after analysis of patients' ED visits data on six and 12-month windows from the intervention. The 6 or 12 months before the first appointment was then defined as the before-period, while the 6 or 12 months after was the after-period.
 
 \subsection*{Study setting and population}
-We conducted this study at the \gls{hgo}, a public hospital located in Almada, Portugal, with approximately 164 thousand ED admissions in 2020 \cite{hospital_garcia_de_orta_relatorio_2020}. 
-Between June 2017 and July 2020, \gls{grhu} reported 972 \gls{hu} (patients with over ten \gls{ed} admissions in a single year at a given time). 
-During this timeline, 238 of these patients were included in the \gls{grhu} program.
+The study was approved by Ethical Committee of the hospital. 
+Anonymized data from patients that were \gls{hu} (patients with over ten \gls{ed} admissions in a single year at a given time) between June 2016 and June 2020 was made available for the study. This period refers to the begging of the GRHU program and the date of the request. Data included: demographic and hospital service usage information. 
+We performed a retrospective non-controlled before-after analysis of patients' ED visits data on 6 and 12-month windows from the intervention. We defined the 6 or 12 months before the first appointment as the \textit{before period}, while the 6 or 12 months after was the \textit{after period}.
+The study was conducted \gls{hgo}, a public hospital in Almada, Portugal, with approximately 164 thousand ED admissions in 2020 \cite{hospital_garcia_de_orta_relatorio_2020}. 
+Data included the 972 \gls{ed} patients that were \gls{hu}. 
+During this timeline, 238 of these patients participated in the \gls{grhu} program.
 
 \subsection*{Inclusion criteria}
 \label{sec:inclusion}
-To be included in this analysis, we used the following inclusion-exclusion criteria:
-\begin{itemize}
-    \item The patient must have admission data (\gls{ed} visits, outpatient consultations, or inpatient stays) throughout the entire period of analysis. We controlled this by assuring that the patient has at least one admission before the "before-window";
-    \item The patient cannot have died during the after-period;
-    \item The patient's before-after window must not include data after 29$^t^h$ February 2020. The \gls{hu}'s \gls{ed} admission data (comprising all 972  \gls{hu}) has dropped significantly after this date (Figure 1). After discussions with the \gls{grhu} team, it was concluded likely to be the effect of Portugal entering a state of emergency due to the COVID-19 pandemic at the beginning of March 2020.
-\end{itemize}
+We included all patients had at least one admission during the \textit{before period}. Patients who died during the after period were excluded. As we observed a significant drop in \gls{hu}'s \gls{ed} admission data after 29$^t^h$ February 2020 (Figure 1), coincident with the first COVID-19 lockdown, patients that had data after this day were excluded. 
 
 \subsection*{Data analysis}
-HGO Ethical Committee approved this study. 
-Anonymised data from patients that were \gls{hu} between 2016 and March 2020 was made available for the study.
 All patients that met the inclusion criteria were included in the analysis, independently of their treatment engagement. 
-We performed one-tailed paired t-tests for the reduction in the mean to confirm the statistical significance of the before-after changes in the hospital services utilization.
-\par Some studied parameters were grouped into clinical categories when possible to reduce granularity and find clinically actionable patterns. 
-Each \gls{ed} visit contains a principal diagnosis assigned to the patient, classified under the \gls{icdnine} code structure \cite{noauthor_icd-9-cm_2011}. 
-This coding structure contains 19 chapters that aggregate all the \gls{icdnine} diagnoses. 
-Therefore, we grouped the \gls{ed} visits by \gls{icdnine} chapters. We grouped inpatient hospitalization and outpatient visits by clinical specialty.
-\par We also assessed demographic characteristics of the patients to profile them: age, gender, and economic status.
+We performed one-tailed paired t-tests for the reduction in the mean to compare the utilization of hospital services in the before and after period. 
+\par Some of the studied parameters were grouped into clinical categories when possible to reduce granularity and find clinically actionable patterns. 
+Each \gls{ed} visit has a principal diagnosis, classified under the \gls{icdnine} code structure \cite{noauthor_icd-9-cm_2011}. 
+This coding structure is hierarchical, which allows the choice of the desired specificity of conditions for analysis. At its highest level, the \gls{icdnine} contains 19 chapters that aggregate a total of 15.000 \gls{icdnine} diagnoses. 
+The \gls{ed} visits were grouped by the \gls{icdnine} chapters.
+Furthermore, hospitalization and outpatient appointments were grouped by clinical specialty instead of diagnoses, as these were not registered for the majority of the records.
+\par Finally, we also analyzed demographic characteristics of the patients to profile them: age, gender, and economic status. We conducted regular meetings with GRHU team to discuss the obtained results from the data analisys. 
 
 \subsection*{Economic Analysis}
-The \gls{grhu} program savings were estimated as the difference between the costs before and after the intervention per patient in the 12 or 6 months window, using the HGO perspective. The included cost categories were: ED visits, hospitalizations, and outpatient appointments. 
-We calculated the healthcare resources usage variation costs using the hospital’s Long-term Contract Program (2017-2019), where the cost of each clinical procedure is based on the expected cost for the hospital for treating it. 
+We estimated the GRHU program savings as the difference between the costs before and after the intervention per patient, using the hospital perspective. The cost categories included were: ED visits, hospitalizations, and outpatient appointments. 
+We calculated the costs of healthcare resources using the hospital’s Long-term Contract Program (2017-2019). This contract determines the cost of each clinical procedure based on the expected cost for the hospital to treat each diagnosis \cite{noauthor_grupos_nodate}. 
 \par Regarding the GRHU intervention costs, the hospital provided the number of hours per week devoted by each GRHU team member (including the time devoted to appointments with patients and the necessary time to prepare them) and their monthly salary.
-We assumed that the number of weekly hours devoted to the program was the same for every 52 weeks of the year. We computed the cost of each \gls{hr} per hour by dividing the number of working hours per month (assumed to be 140 hours, 35 hours per week) by their monthly salary. However, as it is estimated that costs with HR represent 60\% of total operating costs \cite{balakrishnan_applying_2015}, we addedd 40\% of the costs (that represent other direct and indirect costs) with \gls{hr} were added. 
-\par The \gls{roi} associated with the participation in the GRHU intervention was estimated as the ratio between the savings generated and the cost of the GRHU intervention \cite{navratil-strawn_emergency_2014}. 
-If the \gls{roi} estimations are above one euro, more than one euro was saved due to \gls{grhu} intervention. All monetary values are in Euros as of 2020.
+We assumed that the number of weekly hours devoted to the program was the same for every 52 weeks of the year. We computed the cost of each \gls{hr} per hour by dividing the number of working hours per month (assumed to be 140 hours, 35 hours per week) by their monthly salary. However, as it is estimated that costs with HR represent 60\% of total operating costs \cite{balakrishnan_applying_2015}, we added 40\% of other costs (that represent other direct and indirect costs) with \gls{hr}.
+\par We estimated the Return on Investment (\gls{roi}) of the GRHU intervention as the ratio between the savings that it generates and its cost \cite{navratil-strawn_emergency_2014}. All monetary values are in Euros as of 2020.
 
 \section*{Results}
 
 \subsection*{Sample Selection and Characteristics}
-A total of 238 adult patients were intervened between the 26$^{th}$ of June 2016 and the 4$^{th}$ of June 2020. 
-Out of the 238 patients, the inclusion-exclusion criteria selected 152 patients for the 6-month before-after analysis and 88 patients for the 12-month analysis (Figure 2).
-\par From this point on, we will mainly present the results for the 12-month analysis while the 6-month will be left in the Appendix. The 12-month window was the object of most interest to the GRHU team during the regular meetings, and the findings between both analyses do not have significant differences.
-\par The sample of the 88 patients included in the twelve-month window analysis was composed of males (58\%). The median age at the first episode in the data is 58 years old. Most patients were in a situation of economic insufficiency (57\%) (Table \ref{tab:selection_demographics}). 
+A total of 238 adult patients participated in the GRHU program between the 26$^{th}$ of June 2016 and the 4$^{th}$ of June 2020. 
+Out of the 238 patients, 152 patients for the 6-month  and 88 patients for the 12-month  were included for the before-after analysis (Figure 2).
+\par Results for the 6-month window are in Appendix 1. The 12-month window was the object of most interest to the GRHU team, and the findings between both analyses do not have significant differences.
+\par The sample of the 88 patients included in the twelve-month window analysis was composed of 58\% of males. The median age of patients at the first episode observed in the data is 58 years old. Most patients were in a situation of economic insufficiency (57\%) (Table \ref{tab:selection_demographics}). 
 \\
 \subsection*{\gls{ed} utilization}
-\gls{grhu} program leads to a statistically significant 51\% reduction in the number of \gls{ed} visits for the 12 months analysis. The median number of \gls{ed} visits reduced from 14 to 7, with values ranging between 8 and 45 in the before window and between 0 and 32 in the after one. (Table \ref{tab:basic_decrease_12m}). Hence, the \gls{grhu} program was successful in targeting its primary goal: reduce \gls{ed} utilization. The most common diagnostic throughout the analyses period was given by the codes 786 and 300 ("Symptoms involving respiratory system and other chest symptoms"  and "Anxiety, dissociative and somatoform disorders", respectively). 
-\par We further study The \gls{ed} episodes across the Manchester triage system colors. 
-The reductions for the twelve-month window are reported in Table \ref{tab:er_color_12m}. 
-All levels registered a decrease in the number of \gls{ed} visits. 
+A statistically significant 51\% reduction in the number of ED visits for the 12 months analysis. The median number of ED visits reduced from 14 to 7. The total number of visits per patient ranged between 8 and 45 in the before-window and between 0 and 32 after (Table \ref{tab:basic_decrease_12m}). 
+The most common diagnoses were: ``Symptoms involving respiratory system and other chest symptoms" and ``Anxiety, dissociative and somatoform disorders". 
+\par We further analyzed \gls{ed} episodes across the Manchester triage system colors (Table \ref{tab:er_color_12m}). 
+All colors registered a decrease in the number of \gls{ed} visits. 
 However, the decrease was only statistically significant in the yellow, green, and orange levels (58\%, 52\%, and 37\%, respectively).
-\par Furthermore, by grouping the main diagnostic of each \gls{ed} visit into the \gls{icdnine} chapters, we reduced granularity from 476 unique diagnostic codes to just 19 chapters. 
+\par Furthermore, grouping patients by the primary diagnostic of each \gls{ed} visit into the \gls{icdnine} chapters reduced the analysis' granularity from  476 unique diagnostic codes to just 19 chapters. 
 Table \ref{tab:er_chapters_12m} contains the episode reduction across the \gls{icdnine} Chapters.
 
 
 \subsection*{Other hospital services utilization}
-Regarding inpatient stays, a 51\% reduction in the number of episodes (Table \ref{tab:basic_decrease_12m}) corresponding to a median reduction from 1 to 0 episodes (the before window with patients ranging between 0 and 8 episodes while the after window ranged between 0 and 5). 
+We registered a 51\% reduction in the number of inpatient stays (Table \ref{tab:basic_decrease_12m}), corresponding to a median reduction from 1 to 0 episodes. 
 \par Inpatient stays are associated with a clinical specialty group related to the nature of the episode (\eg psychiatry, surgery, or others).
-Therefore we also analyzed the episode reduction across these groups and present it in Table \ref{tab:in_grouped_12m}. The reduction was statistically significant in general surgery and psychiatry (78\% and 69\%, respectively).
+Therefore, we also analyzed the episodes' reduction across these groups (Table \ref{tab:in_grouped_12m}). The reduction was statistically significant in general surgery and psychiatry (78\% and 69\%, respectively).
 The average \gls{los} before the intervention was 13.9 days, and this number decreased to 9.4 days in the after-period, resulting in a 34\% reduction in \gls{los}.
-\par Regarding the outpatient appointments (Table \ref{tab:basic_decrease_12m}), the \gls{grhu} interventions were registered as outpatient appointments in the data. 
-Therefore we split both views of the outpatient appointments: all appointments in the data vs. not including \gls{grhu} appointments. 
-If we do not include the \gls{grhu} interventions, we observe a 3\% decrease however, not statistically significant. If we add the number of \gls{grhu} appointments, the total number of outpatient appointments grows by 41\%
-(Table \ref{tab:in_grouped_12m}), which was not statistically significant. In this scenario, the number of outpatient appointments in the 12-months window ranged between zero and 29 in the before-period and 0 and 36 in the after-period). 
+\par Regarding the outpatient appointments (Table \ref{tab:basic_decrease_12m}), we conducted two analyses:  all appointments (including GRHU appointments) and without including the GRHU appointments. 
+If we do not include the GRHU outpatient appointments, we observe a 3\% decrease (not statistically significant).
+However, if we include the number of GRHU appointments, the total number of outpatient appointments grows by 41\% (Table \ref{tab:in_grouped_12m}), which was statistically significant for the increase in mean visits.
+The number of outpatient appointments in the 12-months window ranged between zero and 29 in the before-period and 0 and 36 in the after-period. 
 
 
 \subsection*{Economic Analysis}
-\par The total cost of \gls{ed} visits, outpatient consultation, and inpatient stays was calculated before and after the first \gls{grhu} appointment (Table  \ref{tab:12_months_cost}) and presented results similar to the utilization of the hospital services. When analysing the differences between before and after the intervention, on the twelve-month window, as hypothesised, the total cost with these patients (88 included in the twelve-month window sample) reduced 43.56\%, generating a saving of €184,240.59. As expected, costs decreased in \gls{ed} and inpatients stays (51.63\% and 51.79\%, respectively) and increased in outpatient appointments (39.34\%). 
-\par The total cost of the \gls{grhu} program for the 238 patients was €162,847.82 (€684.23 per patient). However, as in the 12-month window, only 88 patients the total cost is €79,935.34. The net cost saving was €104,305.25. The \gls{roi} of the \gls{grhu} program was estimated to be 184,240.59/79,935.34, €2.3, which means that for every €1 invested in the \gls{grhu} program, €2.3 was saved. 
+\par The total cost of \gls{ed} visits, outpatient consultation, and inpatient stays was calculated before and after the first \gls{grhu} appointment (Table  \ref{tab:12_months_cost}). On the 12-month window the total cost with these patients (88) reduced 43.56\%, generating a saving of €184,240.59. Costs decreased in \gls{ed} and inpatients stays (51.63\% and 51.79\%, respectively) and increased in outpatient appointments (39.34\%). 
+\par The total cost of the \gls{grhu} program for the 238 patients was €162,847.82 (€684.23 per patient). However, as in the 12-month window, we included 88 patients, the total cost is €79,935.34. Hence, the net cost saving generated by this intervention was €104,305.25. The ROI of the GRHU program was estimated to be 184,240.59/79,935.34, €2.3. This result means that for every €1 invested in the GRHU program, the hospital saved €2.3.  
 
 \section*{Discussion}
-The 51\% reduction in ED episodes demonstrates that GRHU's program was successful, leading to a statically significant reduction in ED usage and inpatient episodes, inpatient LOS, and hospital costs.
+The 51\% reduction in ED episodes demonstrates that GRHU's program was successful, leading to a statically significant reduction in ED usage and inpatient hospitalization, inpatient LOS, and hospital costs.
 These results are similar to other case management implementations for tackling \gls{hu} \cite{grover_case_2018,abello_care_2012}.
-As \gls{ed} utilization influences hospital re-admissions, reducing \gls{ed} visits has a spillover effect on other hospital departments, which also benefits other hospital users, as it contributes to reducing overcrowding \cite{navratil-strawn_emergency_2014, shumway_cost-effectiveness_2008}.
-e registered an increase in outpatient appointments, but the GRHU appointments thoroughly explained it. 
-This program seems to be cost-saving, as it triggered savings of €2.3 per euro spent on the 12-month window, which is in line with similar studies \cite{navratil-strawn_emergency_2014}. 
-It should not be expected significant cost savings as the goal is to guarantee that patients have access to the healthcare services they need and not to reduce their access to healthcare \cite{shumway_cost-effectiveness_2008}.
-\par This information is crucial for understanding how performing case management interventions (which is very different from \gls{ed} care) can provide adequate treatment to the complex needs of \gls{hu}.
-Thus, reducing their necessity of returning to the \gls{ed} results in reduced costs for the hospital and less crowding.
-Moreover, these promise results can serve as a benchmark to justify the implementation of this program at a larger scale. 
-
+As \gls{ed} utilization influences hospital re-admissions, reducing \gls{ed} visits had a spillover effect on other hospital departments (in-patient hospitalization), benefiting other hospital users, thus contributing to reducing overcrowding \cite{navratil-strawn_emergency_2014, shumway_cost-effectiveness_2008}.
+We observed an increase in outpatient appointments, which were fully explained by the  GRHU appointments. 
+This program seems cost-saving, as it triggered savings of €2.3 per euro spent on the 12-month window, which is in line with similar studies \cite{navratil-strawn_emergency_2014}.
 \par \gls{grhu} intervention was successful in reducing \gls{ed} episodes related to mental disorders diagnoses.
 Furthermore, there were high discrepancies when comparing the reductions among the \gls{icdnine} Chapters. 
 For example, diagnostics from "Disease of the Digestive System" experienced a reduction of 61\%, while "Diseases of the Respiratory System" were reduced by 32\%.
 We found that reporting the reductions by disease groups was well welcomed by the \gls{grhu} team. 
-They acknowledged that this information provided them insights that could allow them to improve the case management program by tackling how the program dealt with patients whose diagnostics belong to low reduction groups.
+They acknowledged that this information provided them insights that could improve the case management program by tackling how the program dealt with patients whose diagnostics belong to low reduction groups.
 Lastly, despite the focus on reducing \gls{ed} visits, inpatient stays were also positively affected by the intervention.
-\par Despite the promising results obtained in this study, we recognize some limitations which influence their interpretation. 
-\par The underlying assumptions and weaknesses of a before-after design are well known \cite[Chapter~3]{noauthor_guide_2020}.
+\par This information is crucial for understanding how performing case management interventions can provide adequate treatment to the complex needs of \gls{hu}.
+Case management effectively reduced their necessity of returning to the \gls{ed} while reducing hospital costs and decreasing crowding.
+Moreover, these positive results can serve as a benchmark to justify the implementation of this program at a larger scale. 
+\par Despite the promising results obtained in this study, we recognize some limitations that influence their interpretation. 
+The underlying assumptions and weaknesses of a before-after design are well-known \cite{noauthor_guide_2020}.
 We consider two significant threats to the validity of this study.
 One is the history threat, in which other influential events could have affected the outcome instead of the intervention itself. 
 This could happen, for example, due to the seasonality of the hospital \gls{ed} admissions, in which the winter season usually comes with more visits. 
-However, the seasonality risk is mitigated because the GRHU interventions were spread over three years, resulting in the before-after change being computed throughout many different periods, thus reducing the risk of seasonality and isolated events influencing the event results.
+However, we mitigated the seasonality risk as the GRHU interventions were spread over three years, resulting in the before-after change being computed throughout many different periods, thus reducing the risk of seasonality and isolated events influencing the event results.
 \par Another threat to the validity of this study is the regression to the mean.
 One selection criteria for assigning new patients to the \gls{grhu} program consisted of choosing the higher \gls{ed} users at the time.
 Therefore this is, by definition, an outlier sample of the patients.
 Moreover, studies argue that the \gls{hu} of the \gls{ed} would not maintain its status in the long term.
-Therefore, considering these two points, we conclude that this could potentially bias our results, particularly in the 12 months before-after analysis \cite{lacalle_frequent_2010}. 
+Therefore, considering these two points, we conclude that this could potentially bias our results, particularly in the 12 months before and after analysis \cite{lacalle_frequent_2010}. 
 %\par In general, a quasi-experimental design would have reduced potential biases in our study \cite{maciejewski_study_2013}, particularly by creating a control group.
 %One possible, underused in the literature, but powerful method would have been to perform an \gls{its} analysis \cite{kontopantelis_regression_2015} for two reasons. 
 %Considering that the \gls{grhu} selection criteria chose the highest \gls{ed} users, we could form a control group using the  \gls{hu} with the most similar frequency of \gls{ed} episodes to the intervened patients. 
@@ -472,23 +467,19 @@ Therefore, considering these two points, we conclude that this could potentially
 %\par The application of the inclusion criteria excluded a significant portion of patients (from 238 to 88 in the 12-months analysis and 152 in the six~months window).
 %This population could have provided new insights into the intervention effects.
 %One way to have included more patients would have been to perform short-term analyses, for example, using 2 or 3 months periods.
-\par Furthermore, selection bias issues may arise as the  GRHU staff selected the included patients,  for the most part,  according to the highest ED usage at the time, instead of being randomly selected for the program, and therefore our findings do not necessarily represent all HU of the hospital, but instead HU.
-This limitation may compromise the results' generalisability, which should be considered for the specific demographic targeted here.
-\par Moreover, the program was designed according to the need of \gls{hgo} patients and the analysis according to the hospital payment scheme. 
-Again generalization issues may arise. 
-\par Third, we did not include in the analysis all relevant costs. Due to time and COVID-19 constraints, the hospital did not provide all relevant cost information. 
+\par Furthermore, selection bias issues may arise as the  GRHU staff selected the included patients,  for the most part,  according to the highest ED user at the time, in contrast to randomly selecting high user patients for the program. Therefore our findings do not necessarily represent all HU of the hospital, but most likely only the very high users.
+This limitation may compromise the results' generalisability.
+Moreover, the GRHU team designed the program according to the needs of \gls{hgo}'s patients. And we conducted the analysis according to the hospital payment scheme. 
+Again generalization issues may arise in both these scenarios. 
+\par Due to time and COVID-19 constraints, the hospital did not provide all relevant cost information. 
 This led to the use of different assumptions and hypotheses. 
-Hence, the obtained results may not reflect the actual costs. 
-However, to minimize this limitation, we presented the costs analysis to the hospital administration board members to validate all the assumptions. 
-Furthermore, costs should be analysed from a societal perspective, assessing the impact of the intervention on other relevant stakeholders. 
-For example, we are not including visits to other hospitals or healthcare providers. 
-However, we expect the results of this intervention to be similar.
-Nonetheless, to study the impact of the intervention using the hospital perspective is critical because for the hospital to implement this intervention, it must benefit from it \cite{shumway_cost-effectiveness_2008}.
-\par Finally, by only collecting the information on the number of visits to the hospital, we cannot assess the impact of the intervention on other relevant health outcomes that are impacted by the \gls{ed} \gls{hu} conditions. So future research should also incorporate them in their analysis. 
-This study highlights the importance of data sharing in healthcare, following data safety and protection guidelines. It will strengthen the multidisciplinary work between clinicians, administrators, and researchers. It is a crucial step to conduct analysis that will enable more sustainable and higher-quality healthcare systems. 
-\par Future research should focus on developing tools that help hospital staff selecting new patients for the program, and thus optimizing their work in two ways: choosing patients that contain mainly diagnostics that experienced a high reduction in previous patients of the program and reworking the intervention to improve the reduction on diagnostic groups which do not experience a significant reduction. Moreover, a study conducted with a larger patient sample that is randomized and collects outcomes and costs in a broader perspective should be implemented. 
+To minimize this limitation, we presented the cost analysis to the hospital administration board members to validate all the assumptions. 
+Furthermore, costs should be analyzed from a societal perspective, assessing the impact of the intervention on other relevant stakeholders. 
+\par Finally, by only collecting the information on hospital usage, we cannot assess the impact of the intervention on other relevant health outcomes (\eg clinical outcomes, quality of life). Future research should also incorporate these in the analysis. 
+This study highlights the importance of data sharing in healthcare, as it strengthens the multidisciplinary work between clinicians, administrators, and researchers. Data sharing opens opportunities to conduct research that will enable more sustainable and higher-quality healthcare systems. 
+\par Future research should focus on developing tools that help hospital staff selecting new patients for the program. Thus, they can optimize their work in two ways: choosing patients that contain mainly diagnostics that experienced a high reduction in previous patients of the program and reworking the intervention to improve the reduction on diagnostic groups that do not experience a significant reduction. Moreover, a study conducted with a larger patient sample that is randomized and collects outcomes and costs in a broader perspective can be implemented. 
 \section*{Conclusions}
-The GRHU's program focused on creating a multidisciplinary team that aimed to reduce the number of ED visits of patients that went to the ED more than ten times in the previous year. The intervention led to a 51\% reduction in the number of ED visits and inpatient. Moreover, when comparing the costs with the GRHU program with the saving it generated, saving of €2,3 per €1 spent were registered. 
+The GRHU’s program focused on creating a multidisciplinary team that aimed to reduce the number of ED visits of patients that went to the ED more than ten times in the previous year. The intervention led to a 51\% reduction in the number of ED visits and inpatient. Moreover, the GRHU program generating savings of €2,3 per €1 spent were observed. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -586,7 +577,7 @@ critically revised the manuscript for important intellectual content and supervi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Tables}
-\begin{table}[h!]
+\begin{table}[H]
 \caption{Demographic Information of 3 groups of \gls{grhu} patients: all patients, those eligible for the six months analysis, and those eligible for the 12 months analysis}
       \begin{tabularx}{0.55\textwidth}{c@{\hspace{0.12cm}}c@{\hspace{0.12cm}}c@{\hspace{0.15cm}}c@{\hspace{0.15cm}}c} 
 \toprule & & 
@@ -612,7 +603,7 @@ critically revised the manuscript for important intellectual content and supervi
 \label{tab:selection_demographics}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \caption{12 months a before-after variation of 88 patients.  * differences that passed the one-sided paired t-test for the reduction in mean with a p$<$0.05.}
 \begin{tabularx}{0.5 \textwidth}{@{\hspace{0.10cm}}c@{\hspace{0.10cm}}c@{\hspace{0.10cm}}c@{\hspace{0.10cm}}c@{}}
 \toprule & 
@@ -626,10 +617,10 @@ critically revised the manuscript for important intellectual content and supervi
 \label{tab:basic_decrease_12m}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \caption{12 months before-after variation of 88 patients across Manchester triage system colors.  * differences that passed the one-sided paired t-test for the reduction in mean with a p$<$0.05.}
 \centering
-\begin{tabular}{lrrl}
+\begin{tabular}{lrrl}   
 \toprule
 {} &  \textbf{BEFORE} &  \textbf{AFTER} & \textbf{Variation} \\
    &         &        &           \\
@@ -645,7 +636,7 @@ critically revised the manuscript for important intellectual content and supervi
 \label{tab:er_color_12m}
 \end{table}
 
-\begin{table*}
+\begin{table*}[H]
 \caption{Reduction across ICD-9 Chapters in the 12 months before-after analysis. * differences that passed the one-sided paired t-test for the reduction in mean with a p$<$0.05.}
 \centering
 \begin{tabularx}{0.75\textwidth}{c c c c}
@@ -685,7 +676,7 @@ critically revised the manuscript for important intellectual content and supervi
 \label{tab:er_chapters_12m}
 \end{table*}
 
-\begin{table}
+\begin{table}[H]
 \caption{Reduction across specialty grouped of inpatient stay episodes in 12 months before-after analysis.  * differences that passed the one-sided paired t-test for the reduction in mean with a $p<0.05$. Results are sorted by statistically significant differences and variation}
 \begin{tabular}{cccc}
 \hline
@@ -702,7 +693,7 @@ critically revised the manuscript for important intellectual content and supervi
 \label{tab:in_grouped_12m}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \caption{Total Healthcare expenditure before and after the intervention for the 12-month window}
 \resizebox{\columnwidth}{}{\begin{tabular}{cccc}
 \hline
@@ -724,8 +715,9 @@ critically revised the manuscript for important intellectual content and supervi
 \\
 
 \section*{Additional Files}
-  \subsection*{Additional file 1 --- Results for the analysis conducted for the 6-month window.}
-   Tables that report the results for the 6-month window analysis 
+  \subsection*{Appendix 1}
+   Results of the analyses conducted for the 6-month window.
+   Tables that report the results for the 6-month window analyses. 
 \\
 
 \end{document}
